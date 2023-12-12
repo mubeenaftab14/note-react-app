@@ -1,0 +1,86 @@
+@use "../../../scss/fonts";
+@use "../../../scss/colors";
+
+.teamTable {
+    width: 100%;
+    border: 1px solid #232527;
+    border-radius: 20px;
+
+    thead,
+    tbody {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    tr {
+        display: flex;
+    }
+
+    th,
+    td {
+        font-style: normal;
+        color: #FFFFFF;
+        white-space: nowrap;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: inline-block;
+        text-align: left;
+    }
+
+    th {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        background: #101113;
+        opacity: 0.4;
+        padding: 14px 20px;
+    }
+
+    td {
+        border-top: 1px solid #232527;
+        padding: 16px 20px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    tr {
+
+        td,
+        th {
+            &:first-child {
+                padding-left: 16px;
+            }
+        }
+
+        td {
+
+            &:nth-child(3),
+            &:nth-child(5),
+            &:nth-child(6) {
+                font-family: fonts.$regularFont;
+            }
+        }
+
+        td,
+        th {
+            &:nth-child(1) {
+                width: 25%;
+            }
+
+            &:nth-child(2) {
+                width: 25%;
+            }
+
+            &:nth-child(3) {
+                width: 25%;
+            }
+
+            &:nth-child(4) {
+                width: 25%
+            }
+        }
+    }
+}
